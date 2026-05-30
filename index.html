@@ -17,9 +17,9 @@
     padding:80px 18px 0;
     overflow:hidden;
     background:
-      radial-gradient(1100px 550px at 85% -10%, rgba(255,179,122,.55) 0%, transparent 55%),
-      radial-gradient(900px 500px at -10% 110%, rgba(42,27,92,.55) 0%, transparent 50%),
-      linear-gradient(135deg, #1F2B7A 0%, #7128A4 38%, #D9326F 70%, #F58220 100%);
+      radial-gradient(1000px 500px at 88% -10%, rgba(251,191,36,.30) 0%, transparent 55%),
+      radial-gradient(900px 500px at -10% 110%, rgba(59,130,246,.45) 0%, transparent 55%),
+      linear-gradient(160deg, #0B2545 0%, #13315C 45%, #1E3A8A 100%);
     color:#fff;
     isolation:isolate;
   }
@@ -43,14 +43,16 @@
   }
   .hero::before{
     width:340px; height:340px;
-    background:#FFC5E5;
+    background:#FBBF24;
     top:-80px; right:-80px;
+    opacity:.22;
   }
   .hero::after{
     width:280px; height:280px;
-    background:#5D2DA0;
+    background:#60A5FA;
     bottom:60px; left:-60px;
     animation-delay:-7s;
+    opacity:.30;
   }
   @keyframes floatY{
     from{transform:translateY(-20px);}
@@ -66,12 +68,12 @@
     padding-bottom:150px;
   }
   .hero-title{
-    font-family:'Noticia Text','PingFang TC',serif;
-    font-weight:400;
-    font-size:clamp(40px, 7vw, 64px);
+    font-family:'PingFang TC','Apple LiGothic Medium','Microsoft JhengHei',sans-serif;
+    font-weight:700;
+    font-size:clamp(42px, 7.2vw, 68px);
     line-height:1.15;
-    margin:0 0 10px;
-    letter-spacing:.02em;
+    margin:0 0 12px;
+    letter-spacing:.06em;
     animation:fadeUp .8s .15s ease both;
   }
   .hero-en{
