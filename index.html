@@ -19,12 +19,33 @@
     line-height:1.75;
   }
 
-  .cards{
+  .group{
     max-width:var(--max);
-    margin:0 auto;
+    margin:0 auto 30px;
+  }
+
+  .group-label{
+    font-family:'Questrial','PingFang TC',sans-serif;
+    font-size:13px;
+    color:var(--ink-muted);
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    margin:0 0 12px 4px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .group-label::after{
+    content:'';
+    flex:1;
+    height:1px;
+    background:var(--line);
+  }
+
+  .cards{
     display:flex;
     flex-direction:column;
-    gap:18px;
+    gap:14px;
   }
 
   .card{
@@ -34,7 +55,7 @@
     background:#fff;
     border:1px solid var(--line);
     border-radius:16px;
-    padding:26px 26px;
+    padding:22px 24px;
     transition:border-color .15s ease, box-shadow .15s ease, transform .05s ease;
   }
   .card:hover{
@@ -59,12 +80,30 @@
     margin-left:8px;
     text-transform:uppercase;
   }
+
   .card-desc{
     font-size:15px;
     color:var(--ink-soft);
     line-height:1.65;
     margin-top:6px;
   }
+
+  .card-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 14px;
+    margin-top:10px;
+  }
+  .card-meta span{
+    font-family:'Questrial','PingFang TC',sans-serif;
+    font-size:13px;
+    color:var(--ink-soft);
+    background:#FAFAFA;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:4px 12px;
+  }
+
   .card-go{
     font-family:'Questrial','PingFang TC',sans-serif;
     font-size:13px;
@@ -95,20 +134,66 @@
   歡迎，請選擇要報名的項目。
 </div>
 
-<div class="cards">
+<div class="group">
+  <div class="group-label">一對一 1-on-1</div>
+  <div class="cards">
 
-  <a class="card" href="ny-chinese-school/">
-    <div class="card-title">紐約中文學校 學生報名<span class="en">NY Chinese School</span></div>
-    <div class="card-desc">給紐約中文學校學生的免費英語家教媒合。一至九年級。</div>
-    <div class="card-go">前往報名</div>
-  </a>
+    <a class="card" href="tutoring/">
+      <div class="card-title">一對一英語上課<span class="en">1-on-1 Tutoring</span></div>
+      <div class="card-desc">一對一英語教學媒合。學生與成人自學者皆可報名。</div>
+      <div class="card-go">前往報名</div>
+    </a>
 
-  <a class="card" href="tutoring/">
-    <div class="card-title">一對一英語上課<span class="en">1-on-1 Tutoring</span></div>
-    <div class="card-desc">一對一英語教學媒合。學生與成人自學者皆可報名。</div>
-    <div class="card-go">前往報名</div>
-  </a>
+    <a class="card" href="ny-chinese-school/">
+      <div class="card-title">紐約中文學校 學生報名<span class="en">NY Chinese School</span></div>
+      <div class="card-desc">給紐約中文學校學生的免費英語家教媒合。一至九年級。</div>
+      <div class="card-go">前往報名</div>
+    </a>
 
+  </div>
+</div>
+
+<div class="group">
+  <div class="group-label">小班 Small Classes</div>
+  <div class="cards">
+
+    <a class="card" href="bridget/">
+      <div class="card-title">Teacher Bridget 小班<span class="en">Bridget</span></div>
+      <div class="card-meta">
+        <span>週三 20:00–20:45</span>
+        <span>國小一至四年級 Grade 1–4</span>
+      </div>
+      <div class="card-go">前往報名</div>
+    </a>
+
+    <a class="card" href="dom/">
+      <div class="card-title">Teacher Dom 小班<span class="en">Dom</span></div>
+      <div class="card-meta">
+        <span>週六 10:00–11:00</span>
+        <span>國小六年級至高三 Grade 6–12</span>
+      </div>
+      <div class="card-go">前往報名</div>
+    </a>
+
+    <a class="card" href="shannon-a/">
+      <div class="card-title">Teacher Shannon A 班<span class="en">Shannon A</span></div>
+      <div class="card-meta">
+        <span>週日 09:00–09:50</span>
+        <span>國一至高三 Grade 7–12</span>
+      </div>
+      <div class="card-go">前往報名</div>
+    </a>
+
+    <a class="card" href="shannon-b/">
+      <div class="card-title">Teacher Shannon B 班<span class="en">Shannon B</span></div>
+      <div class="card-meta">
+        <span>週日 10:15–11:05</span>
+        <span>國小五年級至國三 Grade 5–9</span>
+      </div>
+      <div class="card-go">前往報名</div>
+    </a>
+
+  </div>
 </div>
 
 <footer>人師教育協會 My Culture Connect</footer>
