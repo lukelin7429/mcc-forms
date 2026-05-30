@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>一對一英語上課 報名 · 人師教育協會 My Culture Connect</title>
+<meta name="description" content="人師教育協會 一對一英語上課 1-on-1 Tutoring 報名表">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noticia+Text:wght@400;700&family=Questrial&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/shared.css">
+</head>
+<body>
+
+<header class="mcc-header">
+  <a class="logo" href="https://www.mycultureconnect.org" target="_blank" rel="noopener">
+    <img src="../assets/mcc-logo.png" alt="My Culture Connect logo">
+  </a>
+  <div class="brand-name">
+    人師教育協會
+    <span class="en">My Culture Connect</span>
+  </div>
+  <div class="form-title">一對一英語上課 · 1-on-1 Tutoring 報名表</div>
+  <div class="rule"></div>
+</header>
+
+<div class="note">
+  <h3>關於聯繫與上課方式</h3>
+  我們與老師的聯繫平台是 <strong>Google Chat</strong>，上課平台是 <strong>Google Meet</strong>，
+  因此報名時需要學員（與家長）的 <strong>Google 帳號</strong>（一般 Gmail 或學校發的 Google 教育帳號皆可）。
+  <ol>
+    <li>下載 <strong>Google Chat</strong> App（手機或電腦皆可）</li>
+    <li>用報名時填的 Google 帳號登入</li>
+    <li>主動發訊息給吉祥老師：<code>luke@mycultureconnect.org</code></li>
+  </ol>
+  <span class="en">We contact students on Google Chat and hold classes on Google Meet. After registering, please install Google Chat and message Teacher Luke at <code>luke@mycultureconnect.org</code>.</span>
+</div>
+
+<form id="regForm" novalidate>
+
+  <div class="field">
+    <label for="fill_date">填表日期 <span class="en">Date</span></label>
+    <input type="text" id="fill_date" readonly>
+    <div class="hint">系統自動帶入今天日期 · Auto-filled with today's date</div>
+  </div>
+
+  <div class="section-label">學員身分 Identity</div>
+
+  <div class="field">
+    <label>學員身分 <span class="en">I am a…</span><span class="req">*</span></label>
+    <div class="opt-grid cols-2">
+      <label class="opt-row"><input type="radio" name="identity" value="學生 Student" required><span>學生<span class="en"> Student</span></span></label>
+      <label class="opt-row"><input type="radio" name="identity" value="成人自學者 Adult learner"><span>成人自學者<span class="en"> Adult learner</span></span></label>
+    </div>
+  </div>
+
+  <div class="section-label">基本資料 Basics</div>
+
+  <div class="grid2" style="margin-bottom:22px;">
+    <div class="field">
+      <label for="chinese_name">中文姓名 <span class="en">Chinese Name</span><span class="req">*</span></label>
+      <input type="text" id="chinese_name" name="chinese_name" required autocomplete="off">
+    </div>
+    <div class="field">
+      <label for="english_name">英文姓名 <span class="en">English Name</span><span class="req">*</span></label>
+      <input type="text" id="english_name" name="english_name" required autocomplete="off">
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="birth_year">西元出生年份 <span class="en">Year of Birth (CE)</span><span class="req">*</span></label>
+    <input type="text" id="birth_year" name="birth_year" required autocomplete="off"
+           inputmode="numeric" placeholder="例如 2014 或 1985">
+  </div>
+
+  <div class="field">
+    <label for="school_or_work">就讀學校 / 工作領域 <span class="en">School / Work</span><span class="optional">（成人選填）</span></label>
+    <input type="text" id="school_or_work" name="school_or_work" autocomplete="off"
+           placeholder="學生填學校；成人可填工作領域，或留空">
+  </div>
+
+  <div class="field">
+    <label for="grade_or_education">年級 / 學歷 <span class="en">Grade / Education</span><span class="optional">（成人選填）</span></label>
+    <input type="text" id="grade_or_education" name="grade_or_education" autocomplete="off"
+           placeholder="例如：四年級 / 高二 / 大學 / 已就業">
+  </div>
+
+  <div class="section-label">英文程度 English Level</div>
+
+  <div class="field">
+    <label>現在英文程度自評 <span class="en">Self-assessed English level</span><span class="req">*</span></label>
+    <div class="opt-grid cols-3">
+      <label class="opt-row"><input type="radio" name="english_level" value="初學 Beginner" required><span>初學<span class="en"> Beginner</span></span></label>
+      <label class="opt-row"><input type="radio" name="english_level" value="說得一點 Some"><span>說得一點<span class="en"> Some</span></span></label>
+      <label class="opt-row"><input type="radio" name="english_level" value="流暢 Fluent"><span>流暢<span class="en"> Fluent</span></span></label>
+    </div>
+  </div>
+
+  <div class="section-label">上課時段 Class Times</div>
+
+  <div class="field">
+    <label for="preferred_times">偏好上課時段 <span class="en">Preferred Class Times</span><span class="req">*</span></label>
+    <textarea id="preferred_times" name="preferred_times" required
+              placeholder="例如：週六上午 8:00–12:00、週一/三晚上 8:00–10:00。時段愈多愈容易媒合到老師。（臺灣時間）"></textarea>
+    <div class="hint">請以<strong>臺灣時間</strong>填寫。時段給得越多越容易媒合上老師。</div>
+  </div>
+
+  <div class="section-label">聯絡資訊 Contact</div>
+
+  <div class="field">
+    <label for="contact_name">聯絡人姓名 <span class="en">Contact Name</span><span class="req">*</span></label>
+    <input type="text" id="contact_name" name="contact_name" required autocomplete="off"
+           placeholder="學生填家長 / 成人自學者填本人">
+  </div>
+
+  <div class="field">
+    <label for="student_google">學員 Google 帳號 <span class="en">Student's Google Account</span><span class="req">*</span></label>
+    <input type="email" id="student_google" name="student_google" required
+           autocomplete="off" placeholder="name@gmail.com" inputmode="email">
+    <div class="hint">用於加入 Google Chat 與 Google Meet 上課</div>
+  </div>
+
+  <div class="field">
+    <label for="parent_google">家長 Google 帳號 <span class="en">Parent's Google Account</span><span class="optional">（成人選填）</span></label>
+    <input type="email" id="parent_google" name="parent_google"
+           autocomplete="off" placeholder="parent@gmail.com" inputmode="email">
+    <div class="hint">學生請務必填寫，用於與家長聯繫</div>
+  </div>
+
+  <button type="submit" id="submitBtn">送出報名 Submit</button>
+  <div class="errbox" id="errbox"></div>
+</form>
+
+<div class="success" id="done">
+  <div class="check">✓</div>
+  <h2 class="serif">報名完成，謝謝您！<span class="en">Registration received — thank you</span></h2>
+
+  <div class="next">
+    <h3>接下來請主動做這件事</h3>
+    <ol>
+      <li>下載 <strong>Google Chat</strong> App（手機或電腦皆可）</li>
+      <li>用報名時填的 <strong>Google 帳號</strong>登入</li>
+      <li><strong>主動發訊息給吉祥老師</strong>：<code>luke@mycultureconnect.org</code></li>
+    </ol>
+  </div>
+
+  <div class="note-line">若有媒合上就會透過 Line 通知。</div>
+</div>
+
+<footer>人師教育協會 My Culture Connect · 一對一英語上課 1-on-1 Tutoring</footer>
+
+<script>
+  /* sheet.best endpoint：POST 後自動寫入「人師報名表」Sheet 的「一對一上課」tab */
+  const WEBHOOK_URL = 'https://api.sheetbest.com/sheets/75f86386-df2a-442a-987b-6ccd3a065db4/tabs/' + encodeURIComponent('一對一上課');
+
+  // 填表日期：顯示今天（唯讀），存檔以伺服器時間為準
+  (function () {
+    const d = new Date();
+    const pad = n => String(n).padStart(2, '0');
+    document.getElementById('fill_date').value =
+      d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  })();
+
+  const form = document.getElementById('regForm');
+  const btn = document.getElementById('submitBtn');
+  const errbox = document.getElementById('errbox');
+
+  function showError(msg) {
+    errbox.textContent = msg;
+    errbox.style.display = 'block';
+  }
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    errbox.style.display = 'none';
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+    const identity = (document.querySelector('input[name="identity"]:checked') || {}).value || '';
+    const englishLevel = (document.querySelector('input[name="english_level"]:checked') || {}).value || '';
+
+    // 'sv-SE' locale 給 'YYYY-MM-DD HH:MM:SS' 格式；指定 Asia/Taipei 時區
+    const fillTime = new Date().toLocaleString('sv-SE', { timeZone: 'Asia/Taipei' });
+
+    // JSON key 必須對齊 Sheet 第一列中文 header（sheet.best 規則）
+    const payload = {
+      '填表時間':           fillTime,
+      '學員身分':           identity,
+      '中文姓名':           document.getElementById('chinese_name').value.trim(),
+      '英文姓名':           document.getElementById('english_name').value.trim(),
+      '西元出生年份':       document.getElementById('birth_year').value.trim(),
+      '就讀學校 / 工作領域': document.getElementById('school_or_work').value.trim(),
+      '年級 / 學歷':        document.getElementById('grade_or_education').value.trim(),
+      '英文程度自評':       englishLevel,
+      '偏好上課時段':       document.getElementById('preferred_times').value.trim(),
+      '聯絡人姓名':         document.getElementById('contact_name').value.trim(),
+      '學員 Google 帳號':   document.getElementById('student_google').value.trim(),
+      '家長 Google 帳號':   document.getElementById('parent_google').value.trim(),
+    };
+
+    btn.disabled = true;
+    btn.textContent = '送出中… Submitting…';
+
+    try {
+      const res = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+
+      form.style.display = 'none';
+      document.getElementById('done').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = '送出報名 Submit';
+      showError('送出失敗，請檢查網路後再試一次。若持續發生，請直接 email luke@mycultureconnect.org。');
+    }
+  });
+</script>
+</body>
+</html>
