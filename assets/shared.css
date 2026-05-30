@@ -29,48 +29,66 @@ body{
 .serif{font-family:'Noticia Text','PingFang TC',serif;font-weight:400;}
 .sans-display{font-family:'Questrial','PingFang TC',sans-serif;}
 
-/* ---------- MCC Header (logo + 品牌名 + 表單標題) ---------- */
+/* ---------- MCC Header (mini hero with MCC navy gradient + signature curve) ---------- */
 .mcc-header{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:36px 0 24px;
+  position:relative;
+  margin:0 -18px 36px;
+  padding:60px 24px 96px;
   text-align:center;
+  background:
+    radial-gradient(800px 400px at 88% -10%, rgba(251,191,36,.22) 0%, transparent 55%),
+    radial-gradient(700px 400px at -10% 110%, rgba(59,130,246,.35) 0%, transparent 55%),
+    linear-gradient(160deg, #0B2545 0%, #13315C 45%, #1E3A8A 100%);
+  color:#fff;
+  overflow:hidden;
+}
+.mcc-header::after{
+  content:'';
+  position:absolute;
+  left:0; right:0; bottom:-1px;
+  height:54px;
+  background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 100 1920 200' preserveAspectRatio='none'><path d='M1920 300v-4.067c-455.162 0-690.876-51.203-1082.65-129.288C490.044 97.423 0 100.013 0 100.013V300h1920z' fill='%23ffffff'/></svg>") no-repeat bottom / 100% 100%;
 }
 .mcc-header .logo{
-  display:inline-block;
-  margin-bottom:18px;
-}
-.mcc-header .logo img{
-  height:72px;
-  width:auto;
-  display:block;
+  display:none;
 }
 .mcc-header .brand-name{
-  font-family:'Noticia Text','PingFang TC',serif;
-  font-weight:400;
-  font-size:clamp(26px,5.5vw,38px);
-  color:var(--ink);
+  position:relative;
+  z-index:2;
+  font-family:'PingFang TC','Apple LiGothic Medium','Microsoft JhengHei',sans-serif;
+  font-weight:700;
+  font-size:clamp(28px,5.8vw,42px);
+  color:#fff;
   line-height:1.2;
+  letter-spacing:.06em;
 }
 .mcc-header .brand-name .en{
   display:block;
   font-family:'Questrial','PingFang TC',sans-serif;
-  font-size:clamp(12.5px,2.8vw,15px);
-  letter-spacing:.18em;
-  color:var(--ink-muted);
+  font-weight:400;
+  font-size:clamp(11.5px,2.6vw,14px);
+  letter-spacing:.22em;
+  color:rgba(255,255,255,.85);
   margin-top:10px;
   text-transform:uppercase;
 }
 .mcc-header .form-title{
+  position:relative;
+  z-index:2;
   font-family:'Questrial','PingFang TC',sans-serif;
-  font-size:18px;
-  color:var(--ink-soft);
-  margin-top:16px;
+  font-size:15.5px;
+  color:rgba(255,255,255,.92);
+  margin-top:20px;
+  letter-spacing:.02em;
+  padding:0 16px;
+  line-height:1.5;
 }
 .mcc-header .rule{
-  width:54px;height:3px;border-radius:3px;
-  background:var(--brand);
-  margin:20px auto 0;
+  position:relative;
+  z-index:2;
+  width:48px;height:3px;border-radius:3px;
+  background:#FBBF24;
+  margin:18px auto 0;
 }
 
 /* ---------- Intro note (Google Chat 行動指示) ---------- */
@@ -111,13 +129,15 @@ body{
 
 /* ---------- Form card ---------- */
 form{
+  position:relative;
   max-width:var(--max);
   margin:0 auto;
   background:#fff;
   border:1px solid var(--line);
+  border-top:5px solid var(--brand);
   border-radius:18px;
-  box-shadow:var(--shadow);
-  padding:30px 26px 34px;
+  box-shadow:0 30px 80px -30px rgba(20,40,80,.22);
+  padding:34px 26px 34px;
 }
 .field{margin-bottom:22px;}
 .field:last-of-type{margin-bottom:8px;}
@@ -214,10 +234,11 @@ input[readonly]{background:var(--bg-subtle);color:var(--ink-soft);cursor:default
 
 .section-label{
   font-family:'Questrial','PingFang TC',sans-serif;
-  font-size:13px;font-weight:400;letter-spacing:.14em;text-transform:uppercase;
-  color:var(--gold);
-  margin:30px 0 16px;
-  padding-bottom:8px;border-bottom:1px solid var(--line);
+  font-size:13px;font-weight:600;letter-spacing:.20em;text-transform:uppercase;
+  color:var(--brand-deep);
+  margin:34px 0 18px;
+  padding:6px 0 6px 14px;
+  border-left:4px solid var(--brand);
 }
 
 /* ---------- Submit button ---------- */
