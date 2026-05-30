@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teacher Bridget 小班 報名 · 人師教育協會 My Culture Connect</title>
+<meta name="description" content="Teacher Bridget 小班 · 國小低中年級英語小班 · My Culture Connect">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noticia+Text:wght@400;700&family=Questrial&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/shared.css">
+<style>
+  .class-info{
+    max-width:var(--max);
+    margin:0 auto 22px;
+    background:#fff;
+    border:1px solid var(--line);
+    border-left:4px solid var(--brand);
+    border-radius:10px;
+    padding:18px 22px;
+  }
+  .class-info .row{
+    display:flex;
+    align-items:baseline;
+    gap:14px;
+    padding:6px 0;
+  }
+  .class-info .row + .row{
+    border-top:1px solid var(--line);
+  }
+  .class-info .k{
+    font-family:'Questrial','PingFang TC',sans-serif;
+    font-size:12px;
+    color:var(--ink-muted);
+    letter-spacing:.10em;
+    text-transform:uppercase;
+    min-width:90px;
+    flex-shrink:0;
+  }
+  .class-info .v{
+    font-size:16px;
+    color:var(--ink);
+    line-height:1.5;
+  }
+  .class-info .v .en{
+    color:var(--ink-muted);
+    font-size:13px;
+    margin-left:6px;
+  }
+</style>
+</head>
+<body>
+
+<header class="mcc-header">
+  <a class="logo" href="https://www.mycultureconnect.org" target="_blank" rel="noopener">
+    <img src="../assets/mcc-logo.png" alt="My Culture Connect logo">
+  </a>
+  <div class="brand-name">
+    人師教育協會
+    <span class="en">My Culture Connect</span>
+  </div>
+  <div class="form-title">Teacher Bridget 小班 · 報名表</div>
+  <div class="rule"></div>
+</header>
+
+<div class="class-info">
+  <div class="row">
+    <div class="k">上課時段</div>
+    <div class="v">每週三 晚上 8:00–8:45（臺灣時間）<span class="en">Wed 20:00–20:45 Taiwan time</span></div>
+  </div>
+  <div class="row">
+    <div class="k">適合對象</div>
+    <div class="v">國小一至四年級<span class="en">Grade 1–4</span></div>
+  </div>
+</div>
+
+<div class="note">
+  <h3>關於聯繫與上課方式</h3>
+  我們與老師的聯繫平台是 <strong>Google Chat</strong>，上課平台是 <strong>Google Meet</strong>，
+  因此報名時需要孩子與家長的 <strong>Google 帳號</strong>（一般 Gmail 或學校發的 Google 教育帳號皆可）。
+  <ol>
+    <li>下載 <strong>Google Chat</strong> App（手機或電腦皆可）</li>
+    <li>用報名時填的 Google 帳號登入</li>
+    <li>主動發訊息給吉祥老師：<code>luke@mycultureconnect.org</code></li>
+  </ol>
+  <span class="en">We contact families on Google Chat and hold classes on Google Meet. After registering, please install Google Chat and message Teacher Luke at <code>luke@mycultureconnect.org</code>.</span>
+</div>
+
+<form id="regForm" novalidate>
+
+  <div class="field">
+    <label for="fill_date">填表日期 <span class="en">Date</span></label>
+    <input type="text" id="fill_date" readonly>
+    <div class="hint">系統自動帶入今天日期 · Auto-filled with today's date</div>
+  </div>
+
+  <div class="section-label">學生資料 Student</div>
+
+  <div class="grid2" style="margin-bottom:22px;">
+    <div class="field">
+      <label for="chinese_name">中文姓名 <span class="en">Chinese Name</span><span class="req">*</span></label>
+      <input type="text" id="chinese_name" name="chinese_name" required autocomplete="off">
+    </div>
+    <div class="field">
+      <label for="english_name">英文姓名 <span class="en">English Name</span><span class="req">*</span></label>
+      <input type="text" id="english_name" name="english_name" required autocomplete="off">
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-bottom:22px;">
+    <div class="field">
+      <label for="birth_year">西元出生年份 <span class="en">Year of Birth (CE)</span><span class="req">*</span></label>
+      <select id="birth_year" name="birth_year" required>
+        <option value="" disabled selected>請選擇 Select…</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="grade">年級 <span class="en">Grade</span><span class="req">*</span></label>
+      <select id="grade" name="grade" required>
+        <option value="" disabled selected>請選擇 Select…</option>
+        <option value="一年級 Grade 1">一年級 Grade 1</option>
+        <option value="二年級 Grade 2">二年級 Grade 2</option>
+        <option value="三年級 Grade 3">三年級 Grade 3</option>
+        <option value="四年級 Grade 4">四年級 Grade 4</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="field">
+    <label for="school">就讀學校 <span class="en">Day School</span><span class="req">*</span></label>
+    <input type="text" id="school" name="school" required autocomplete="off"
+           placeholder="平日就讀的學校 Your regular weekday school">
+  </div>
+
+  <div class="section-label">家長與聯絡 Parent &amp; Contact</div>
+
+  <div class="field">
+    <label for="parent_name">家長姓名 <span class="en">Parent / Guardian Name</span><span class="req">*</span></label>
+    <input type="text" id="parent_name" name="parent_name" required autocomplete="off">
+  </div>
+
+  <div class="field">
+    <label for="student_google">孩子的 Google 帳號 <span class="en">Student's Google Account</span><span class="req">*</span></label>
+    <input type="email" id="student_google" name="student_google" required
+           autocomplete="off" placeholder="name@gmail.com" inputmode="email">
+    <div class="hint">用於加入 Google Chat 與 Google Meet 上課</div>
+  </div>
+
+  <div class="field">
+    <label for="parent_google">家長的 Google 帳號 <span class="en">Parent's Google Account</span><span class="req">*</span></label>
+    <input type="email" id="parent_google" name="parent_google" required
+           autocomplete="off" placeholder="parent@gmail.com" inputmode="email">
+    <div class="hint">用於與家長聯繫</div>
+  </div>
+
+  <button type="submit" id="submitBtn">送出報名 Submit</button>
+  <div class="errbox" id="errbox"></div>
+</form>
+
+<div class="success" id="done">
+  <div class="check">✓</div>
+  <h2 class="serif">報名完成，謝謝您！<span class="en">Registration received — thank you</span></h2>
+
+  <div class="next">
+    <h3>接下來請主動做這件事</h3>
+    <ol>
+      <li>下載 <strong>Google Chat</strong> App（手機或電腦皆可）</li>
+      <li>用報名時填的 <strong>Google 帳號</strong>登入</li>
+      <li><strong>主動發訊息給吉祥老師</strong>：<code>luke@mycultureconnect.org</code></li>
+    </ol>
+  </div>
+
+  <div class="note-line">若有媒合上就會透過 Line 通知。</div>
+</div>
+
+<footer>人師教育協會 My Culture Connect · Teacher Bridget 小班</footer>
+
+<script>
+  /* sheet.best endpoint：POST 後自動寫入「人師報名表」Sheet 的「小班_Bridget」tab */
+  const WEBHOOK_URL = 'https://api.sheetbest.com/sheets/75f86386-df2a-442a-987b-6ccd3a065db4/tabs/' + encodeURIComponent('小班_Bridget');
+
+  (function () {
+    const d = new Date();
+    const pad = n => String(n).padStart(2, '0');
+    document.getElementById('fill_date').value =
+      d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+
+    // 出生年份選項：涵蓋國小一至四年級（約 6–12 歲，給上下緣彈性）
+    const sel = document.getElementById('birth_year');
+    const thisYear = d.getFullYear();
+    for (let y = thisYear - 6; y >= thisYear - 12; y--) {
+      const o = document.createElement('option');
+      o.value = String(y);
+      o.textContent = String(y);
+      sel.appendChild(o);
+    }
+  })();
+
+  const form = document.getElementById('regForm');
+  const btn = document.getElementById('submitBtn');
+  const errbox = document.getElementById('errbox');
+
+  function showError(msg) {
+    errbox.textContent = msg;
+    errbox.style.display = 'block';
+  }
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    errbox.style.display = 'none';
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    const fillTime = new Date().toLocaleString('sv-SE', { timeZone: 'Asia/Taipei' });
+
+    // JSON key 必須對齊 Sheet 第一列中文 header（sheet.best 規則）
+    const payload = {
+      '填表時間':         fillTime,
+      '中文姓名':         document.getElementById('chinese_name').value.trim(),
+      '英文姓名':         document.getElementById('english_name').value.trim(),
+      '西元出生年份':     document.getElementById('birth_year').value,
+      '年級':            document.getElementById('grade').value,
+      '就讀學校':         document.getElementById('school').value.trim(),
+      '家長姓名':         document.getElementById('parent_name').value.trim(),
+      '孩子 Google 帳號': document.getElementById('student_google').value.trim(),
+      '家長 Google 帳號': document.getElementById('parent_google').value.trim(),
+    };
+
+    btn.disabled = true;
+    btn.textContent = '送出中… Submitting…';
+
+    try {
+      const res = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+
+      form.style.display = 'none';
+      document.getElementById('done').style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (err) {
+      btn.disabled = false;
+      btn.textContent = '送出報名 Submit';
+      showError('送出失敗，請檢查網路後再試一次。若持續發生，請直接 email luke@mycultureconnect.org。');
+    }
+  });
+</script>
+</body>
+</html>
