@@ -142,8 +142,7 @@
 <footer>人師教育協會 My Culture Connect · 紐約中文學校 學生報名表</footer>
 
 <script>
-  /* sheet.best endpoint：POST 後自動寫入「人師報名表」Sheet 的「紐約中文學校」tab */
-  const WEBHOOK_URL = 'https://api.sheetbest.com/sheets/75f86386-df2a-442a-987b-6ccd3a065db4/tabs/' + encodeURIComponent('紐約中文學校');
+  const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzWp2Y8J2ADrAARm_YRmN9J860ERvuA8FiNJ9yuKtNxw3y-V8M1F8xW87qcAvMgwJ5r/exec';
 
   // 填表日期：顯示今天（唯讀），存檔以伺服器時間為準
   (function () {
@@ -192,6 +191,7 @@
 
     // JSON key 必須對齊 Sheet 第一列中文 header（sheet.best 規則）
     const payload = {
+      '__tab':            '紐約中文學校',
       '填表時間':         fillTime,
       '中文姓名':         document.getElementById('chinese_name').value.trim(),
       '英文姓名':         document.getElementById('english_name').value.trim(),
