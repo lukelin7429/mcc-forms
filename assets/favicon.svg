@@ -1,0 +1,17 @@
+<svg viewBox="0 0 120 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="人師教育協會 logo">
+  <defs>
+    <linearGradient id="g3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c9543a"/><stop offset="1" stop-color="#9e3322"/></linearGradient>
+    <linearGradient id="rs3" gradientUnits="userSpaceOnUse" x1="30" y1="44" x2="98" y2="104"><stop offset="0" stop-color="#bdea8f"/><stop offset="1" stop-color="#6cbb45"/></linearGradient>
+    <linearGradient id="rs3leaf" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#bdea8f"/><stop offset="1" stop-color="#7cc24f"/></linearGradient>
+  </defs>
+  <path d="M60 30 C60 18 60 12 60 6" stroke="#7cc24f" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+  <path d="M60 16 C50 16 43 11 41 4 C51 3 59 7 60 16 Z" fill="url(#rs3leaf)"/>
+  <path d="M60 19 C70 19 77 14 79 7 C69 6 61 10 60 19 Z" fill="url(#rs3leaf)"/>
+  <rect x="8" y="26" width="104" height="96" rx="26" fill="url(#g3)"/>
+  <g stroke="url(#rs3)" stroke-width="10.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M38 48 L38 100"/>
+    <path d="M38 48 L54 48 Q66 48 66 62 Q66 75 54 75 L38 75"/>
+    <path d="M52 75 L70 100"/>
+    <path d="M96 56 Q96 47 85 47 Q74 47 74 58 Q74 67 85 69 Q96 71 96 82 Q96 92 85 92 Q74 92 74 83"/>
+  </g>
+</svg>
