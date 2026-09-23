@@ -12,7 +12,7 @@
  */
 
 const SHEET_ID = '13Y7E1s4Z2vuoNFH7IMc4bbnugQ1ezOinngpKKVMm5tk';
-const MAIL_TO  = 'luke@mycultureconnect.org';   // 多人通知請用逗號分隔
+const MAIL_TO  = 'kevin@mycultureconnect.org';  // 多人通知請用逗號分隔（2026-09 起報名通知由理事長收）
 
 /**
  * 表單路由表
