@@ -40,6 +40,11 @@ function updatePracticumForm() {
     'We cannot process sign-ups without this message.'
   );
 
+  // 1b. The Chat Space question was a CHECKBOX, so people could tick both the
+  //     "yes invite me" and "no thanks" options. Rebuild it as a radio button.
+  //     GAS cannot change an item's type, so it has to be deleted and re-added.
+  convertChatSpaceToRadio_(form);
+
   // 2. Kill the email escape hatch - match on the CHOICE TEXT, not the title
   //    (matching the title failed once; safer to look at what the options say)
   let hatchFixed = false;
@@ -107,4 +112,47 @@ function updatePracticumForm() {
   );
 
   Logger.log('Done. Form edit URL: ' + form.getEditUrl());
+}
+
+/**
+ * Rebuild the "Google Chat Space" question as a single-choice (radio) question.
+ * No-op if it is already one. Note: because the item is deleted and re-added,
+ * responses collected for the old question stay in their old sheet column and
+ * new answers land in a new column.
+ */
+function convertChatSpaceToRadio_(form) {
+  let idx = -1;
+  let target = null;
+  form.getItems().forEach(function (item, i) {
+    if (item.getTitle().replace(/\s+/g, ' ').indexOf('Google Chat Space') === -1) return;
+    target = item;
+    idx = i;
+  });
+  if (!target) {
+    Logger.log('convert: Chat Space question not found');
+    return;
+  }
+  if (target.getType() === FormApp.ItemType.MULTIPLE_CHOICE) {
+    Logger.log('convert: already a radio question, nothing to do');
+    return;
+  }
+  if (target.getType() !== FormApp.ItemType.CHECKBOX) {
+    Logger.log('convert: unexpected type ' + target.getType() + ', leaving it alone');
+    return;
+  }
+
+  const old = target.asCheckboxItem();
+  const title = old.getTitle();
+  const help = old.getHelpText();
+  const required = old.isRequired();
+  const choices = old.getChoices().map(function (c) { return c.getValue(); });
+
+  form.deleteItem(idx);
+  const radio = form.addMultipleChoiceItem()
+    .setTitle(title)
+    .setHelpText(help)
+    .setChoiceValues(choices)
+    .setRequired(required);
+  form.moveItem(radio.getIndex(), idx);
+  Logger.log('convert: rebuilt as radio at index ' + idx);
 }
